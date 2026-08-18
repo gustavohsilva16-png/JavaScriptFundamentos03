@@ -1,9 +1,16 @@
-const frutas = ["Maça", "Banana", "Uva"];//Frutas é nosso array
+const frutas = ["Maça", "Banana", {
+    codigo: 2,
+    nome: "Uva"
+}];//Frutas é nosso array
 
-for (let i = 1; i < frutas.length; i++)// usamos para percorrer as frutas e começamos no 1 nesse for que definimos
+for (let i = 0; i < frutas.length; i++)// usamos para percorrer as frutas e começamos no 1 nesse for que definimos
 
-    {console.log(`${frutas[i]}`);} // aqui percorremos o array frutas
+{ console.log(`${frutas[i]}`); } // aqui percorremos o array frutas
 
-frutas.forEach((fruta) => {console.log(fruta)}); // esse usa o método forEach
+frutas.forEach((A) => {
+    if (A.codigo === 1) {
+        console.log(A.nome)
+    }
+}); // esse usa o método forEach
 
 
