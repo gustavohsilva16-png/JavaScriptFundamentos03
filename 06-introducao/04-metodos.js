@@ -1,17 +1,20 @@
-class Aluno {
-    constructor(nome, idade) {
-        this.nome = nome,
-            this.idade = idade
-    }
+class Produto {
+  constructor(nome, preco) {
+    this.nome = nome;  // Faltava a atribuição (=)
+    this.preco = preco;
+  }
 
-
-    apresentar() {
-        console.log(`${this.nome} - idade: ${this.idade}`)
-    }
+  // O método deve ficar dentro da classe
+  aplicarDesconto(percentual) {
+    this.preco -= this.preco * (percentual / 100);
+  }
 }
 
-const aluno = new Aluno("João", 17);
-aluno.apresentar();
+// 1. Criando o Teclado e aplicando desconto
+const teclado = new Produto("Teclado", 100);
+teclado.aplicarDesconto(10); // Preço passa a ser 90
+console.log(teclado);
 
-const aluno2 = new Aluno("Gustavo", 19);
-aluno2.apresentar();
+// 2. Criando o Mouse com um novo nome de variável
+const mouse = new Produto("Mouse", 70);
+console.log(mouse);
